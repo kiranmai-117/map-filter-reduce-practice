@@ -55,6 +55,7 @@ function testReduce() {
   display("List of bird species", ["sparrow", "crow", "sparrow", "eagle", "crow"].flat().reduce(removeDuplicate, []), ["sparrow", "crow", "eagle"]);
   display("student present in each period", [["Asha", "Ravi", "Neel"], ["Ravi"], ["Asha", "Meera"]].flat().reduce(removeDuplicate, []), ["Asha", "Ravi", "Neel", "Meera"]);
   display("logs of candy refills", [[5, 3], [2], [4, 1]].flat().reduce(total), 15);
+  display("logs runner (no of miles)", [[2, 3, 2], [4], [1, 1]].flat().reduce(total), 13);
 }
 
 function testSome() {
@@ -62,7 +63,7 @@ function testSome() {
 }
 
 function testEvery() {
-  display("temperature records", [[22, 23], [25, 24, 22], [29]].flat().every(isTempBelow), true);
+  display("temperature records below 32", [[22, 23], [25, 24, 22], [29]].flat().every(isTempBelow), true);
 }
 
 function testAll() {
