@@ -50,12 +50,13 @@ function display(gist, actual, expected) {
 
 function testReduce() {
   console.log("\n  REDUCE \n");
-  display("series of colors", ["blue", "red", "blue", "yellow", "blue"].reduce(countColor, 0), 3);
+  display("series of colors of festival ribbons", ["blue", "red", "blue", "yellow", "blue"].reduce(countColor, 0), 3);
   display("constellations from each night", [["Orion", "Leo"],["Taurus"],["Orion", "Gemini"]].flat().reduce(removeDuplicate, []), ["Orion", "Leo", "Taurus", "Gemini"]);
   display("List of bird species", ["sparrow", "crow", "sparrow", "eagle", "crow"].flat().reduce(removeDuplicate, []), ["sparrow", "crow", "eagle"]);
   display("student present in each period", [["Asha", "Ravi", "Neel"], ["Ravi"], ["Asha", "Meera"]].flat().reduce(removeDuplicate, []), ["Asha", "Ravi", "Neel", "Meera"]);
   display("logs of candy refills", [[5, 3], [2], [4, 1]].flat().reduce(total), 15);
   display("logs runner (no of miles)", [[2, 3, 2], [4], [1, 1]].flat().reduce(total), 13);
+  display("paint colors in session", [["blue", "yellow"], ["yellow", "green"] ,["blue"]].flat().reduce(removeDuplicate, []), ["blue", "yellow", "green"]);
 }
 
 function testSome() {
