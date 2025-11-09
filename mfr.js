@@ -1,3 +1,10 @@
+const isTempBelow = function(element) {
+  if (element >= 32) {
+    return false;
+  }
+  return true;
+}
+
 const isNoteFound = function(element) {
   if (element === "do") {
     return true;
@@ -54,9 +61,14 @@ function testSome() {
   display("choir groups (musical notes)", [["mi", "fa", "so"], ["do", "mi"], ["fa"]].flat().some(isNoteFound), true);
 }
 
+function testEvery() {
+  display("temperature records", [[22, 23], [25, 24, 22], [29]].flat().every(isTempBelow), true);
+}
+
 function testAll() {
   testReduce();
   testSome();
+  testEvery();
 }
 
 testAll();
